@@ -36,17 +36,17 @@ int main()
 		{
 			if (IsFlipNum(i))
 			{
-				//printf("%d ", i);
+				printf("%d ", i);   //print prime numbers
 				nResultCnt++;
 			}
 		}
 		
 	}
 
-	printf("Result count : %d\n", nResultCnt);
+	printf("\nResult count : %d\n", nResultCnt);
 	printf("\nElapsed time : %.3f sec\n\n", (float)(clock()-StartTime)/1000);
 
-	system("pause");
+	system("pause"); //remain to open console window 
 	return 0;
 }
 
@@ -58,18 +58,18 @@ void GetPrimeNums(int nNum)
 	arrChkPrime[0] = 0;	//mark to not prime
 	arrChkPrime[1] = 0;	//mark to not prime
 
-	//?¼ë‹¨ ëª¨ë“  ?«ìë¥??Œìˆ˜ë¡?ë§ˆí¬?œë‹¤
-	for (int i = 2; i <= nNum; i++) //skip 0,1
+	//mark to prime num for all numbers
+	for (int i = 2; i <= nNum; i++)		//skip 0,1
 	{
 		arrChkPrime[i] = 1;	
 	}
 
-	//2ë¶€??root(nNum)ê¹Œì????«ì???€?´ì„œ ê·??˜ì˜ ë°°ìˆ˜?¤ì„ ?Œìˆ˜ê°€ ?„ë‹˜?¼ë¡œ ?œì‹œ?œë‹¤. ?˜ëˆ„???¨ì–´ì§€ë¯€ë¡??Œìˆ˜ê°€ ?„ë‹ˆì§€
+	//it is enough to check to sqrt(nNum)
 	double dblEndRef = sqrt(nNum);
 	
-	for (int i = 2; i <= dblEndRef; i++)	//ë£¨íŠ¸nNum ê¹Œì?ë§??ê??˜ë©´ ?œë‹¨?? ?˜í•™?ë“¤??ê²€ì¦í–ˆ?¤ê³  ?˜ë„¤.
+	for (int i = 2; i <= dblEndRef; i++)	
 	{
-		for (int j = i*i; j <= nNum; j+=i)	//ië¥??œì™¸??i??ë°°ìˆ˜(2ë°?i+i), 3ë°?i+i+i) ...)?¤ì„ ?ê??œë‹¤
+		for (int j = i*i; j <= nNum; j+=i)	//2times:i+i, 3times:i+i+i
 		{
 			if (arrChkPrime[i] == 0)
 				continue;
@@ -77,14 +77,6 @@ void GetPrimeNums(int nNum)
 				arrChkPrime[j] = 0;
 		}
 	}
-
-	/*for (int i = 0; i <= nNum; i++)
-	{
-		if (arrChkPrime[i] == 1)
-			printf("%d ", i);
-	}*/
-
-	//printf("finish\n");
 }
 
 
