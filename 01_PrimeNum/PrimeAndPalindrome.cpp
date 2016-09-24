@@ -4,6 +4,8 @@
 //Git test 4
 //Git test 5 from GitHub
 
+//Git test 6
+
 #include <iostream>
 #include <string>
 #include "time.h"
