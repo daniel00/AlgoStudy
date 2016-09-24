@@ -1,3 +1,5 @@
+//master
+
 //Git
 //Git test 2
 //Git test 3
@@ -5,6 +7,7 @@
 //Git test 5 from GitHub
 
 //Git test 6
+//Git test 7
 
 #include <iostream>
 #include <string>
