@@ -2,6 +2,7 @@
 //Git test 2
 //Git test 3
 //Git test 4
+//Git test 5 from GitHub
 
 #include <iostream>
 #include <string>
@@ -56,18 +57,18 @@ void GetPrimeNums(int nNum)
 	arrChkPrime[0] = 0;	//mark to not prime
 	arrChkPrime[1] = 0;	//mark to not prime
 
-	//ÀÏ´Ü ¸ğµç ¼ıÀÚ¸¦ ¼Ò¼ö·Î ¸¶Å©ÇÑ´Ù
+	//ì¼ë‹¨ ëª¨ë“  ìˆ«ìë¥¼ ì†Œìˆ˜ë¡œ ë§ˆí¬í•œë‹¤
 	for (int i = 2; i <= nNum; i++) //skip 0,1
 	{
 		arrChkPrime[i] = 1;	
 	}
 
-	//2ºÎÅÍ root(nNum)±îÁöÀÇ ¼ıÀÚ¿¡ ´ëÇØ¼­ ±× ¼öÀÇ ¹è¼öµéÀ» ¼Ò¼ö°¡ ¾Æ´ÔÀ¸·Î Ç¥½ÃÇÑ´Ù. ³ª´©¾î ¶³¾îÁö¹Ç·Î ¼Ò¼ö°¡ ¾Æ´ÏÁö
+	//2ë¶€í„° root(nNum)ê¹Œì§€ì˜ ìˆ«ìì— ëŒ€í•´ì„œ ê·¸ ìˆ˜ì˜ ë°°ìˆ˜ë“¤ì„ ì†Œìˆ˜ê°€ ì•„ë‹˜ìœ¼ë¡œ í‘œì‹œí•œë‹¤. ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ë¯€ë¡œ ì†Œìˆ˜ê°€ ì•„ë‹ˆì§€
 	double dblEndRef = sqrt(nNum);
 	
-	for (int i = 2; i <= dblEndRef; i++)	//·çÆ®nNum ±îÁö¸¸ Á¡°ËÇÏ¸é µÈ´Ü´Ù. ¼öÇĞÀÚµéÀÌ °ËÁõÇß´Ù°í ÇÏ³×.
+	for (int i = 2; i <= dblEndRef; i++)	//ë£¨íŠ¸nNum ê¹Œì§€ë§Œ ì ê²€í•˜ë©´ ëœë‹¨ë‹¤. ìˆ˜í•™ìë“¤ì´ ê²€ì¦í–ˆë‹¤ê³  í•˜ë„¤.
 	{
-		for (int j = i*i; j <= nNum; j+=i)	//i¸¦ Á¦¿ÜÇÑ iÀÇ ¹è¼ö(2¹è(i+i), 3¹è(i+i+i) ...)µéÀ» Á¡°ËÇÑ´Ù
+		for (int j = i*i; j <= nNum; j+=i)	//ië¥¼ ì œì™¸í•œ iì˜ ë°°ìˆ˜(2ë°°(i+i), 3ë°°(i+i+i) ...)ë“¤ì„ ì ê²€í•œë‹¤
 		{
 			if (arrChkPrime[i] == 0)
 				continue;
